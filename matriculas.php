@@ -33,6 +33,16 @@ var_dump($alunos2023);
 
 $alunos2024 = [...$alunos2021, 'Lestian', ...$novosAlunos]; //ele me dá mais flexibilidade pois o array_merge só funciona com arrays, já esse cara, eu posso adicionar qualquer elemento à ele
 
-var_dump($alunos2024);
 
 //procurar tambem por spread operator, que tbm tem esse simbolo ...
+
+array_push($alunos2024, 'Alice', 'Bob', 'Charlie'); //adiciona os valores ao final do array existente
+$alunos2024[] = 'Luiz'; //adiciona apenas um elemento ao raay, torna desnecessario o uso da função
+
+array_unshift($alunos2024, 'Stephane', 'Rafaela'); //faz o mesmo que o array_push, porem adiciona no inicio do array
+
+echo array_shift($alunos2024) . PHP_EOL; //pega o primeiro elemento e remove do array, depois reorganiza os que restaram e retorna o elemento removidp
+
+echo array_pop($alunos2024) . PHP_EOL; //faz o mesmo que o array shift só que ele remove o ultimo elemento e retorna ele
+
+var_dump($alunos2024);
